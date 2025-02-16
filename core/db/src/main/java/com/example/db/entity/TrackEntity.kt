@@ -31,7 +31,7 @@ data class TrackEntity(
     val duration: Long,
     val artistId: Long,
     val albumId: Long,
-    val preview: String
+    val preview: String,
 )
 
 data class TrackWithRelations(
@@ -47,5 +47,5 @@ data class TrackWithRelations(
         parentColumn = "albumId",
         entityColumn = "id"
     )
-    val album: AlbumEntity
+    val album: AlbumEntity,
 )

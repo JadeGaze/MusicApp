@@ -10,28 +10,28 @@ data class TrackResponse(
     val duration: Int, //seconds
     val artist: ArtistResponse,
     val album: AlbumResponse,
-    val preview: String
+    val preview: String,
 )
 
 @Serializable
 data class ArtistResponse(
     val id: Long,
-    val name: String
+    val name: String,
 )
 
 @Serializable
 data class AlbumResponse(
     val id: Long,
     val title: String,
-    @SerialName("cover_big") val cover: String
+    @SerialName("cover_big") val cover: String,
 )
 
 @Serializable
 data class TracksContainer(
-    val data: List<TrackResponse>
+    val data: List<TrackResponse>,
 )
 
 @Serializable
 data class ChartResponse(
-    val tracks: TracksContainer
+    val tracks: TracksContainer,
 )

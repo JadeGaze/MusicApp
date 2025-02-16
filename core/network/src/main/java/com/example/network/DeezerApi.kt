@@ -1,7 +1,6 @@
 package com.example.network
 
 import com.example.network.response.ChartResponse
-import com.example.network.response.TrackResponse
 import com.example.network.response.TracksContainer
 import retrofit2.http.GET
 import retrofit2.http.Path

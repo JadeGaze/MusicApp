@@ -11,7 +11,7 @@ class TrackRepository(
     private val tracksDao: TracksDao,
     private val albumDao: AlbumDao,
     private val artistDao: ArtistDao,
-    private val deezerApi: DeezerApi
+    private val deezerApi: DeezerApi,
 ) {
     suspend fun saveTrack(track: TrackWithRelations) {
         albumDao.saveAlbum(track.album)
@@ -27,7 +27,7 @@ class TrackRepository(
         return deezerApi.getTracks()?.tracks?.data ?: listOf()
     }
 
-    suspend fun searchLocalTracks(query: String) : List<TrackWithRelations> {
+    suspend fun searchLocalTracks(query: String): List<TrackWithRelations> {
         return tracksDao.search(query) ?: listOf()
     }
 
